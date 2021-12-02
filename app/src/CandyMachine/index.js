@@ -77,18 +77,6 @@ const CandyMachine = ({ walletAddress }) => {
 
   const getCandyMachineState = async () => {};
 
-  const getProvider = () => {
-    const rpcHost = process.env.REACT_APP_SOLANA_RPC_HOST;
-    const connection = new Connection(rpcHost);
-    const provider = new Provider(
-      connection,
-      window.solana,
-      opts.preflightCommitment
-    );
-
-    return provider;
-  };
-
   const getMetadata = async (mint) => {
     return (
       await PublicKey.findProgramAddress(
