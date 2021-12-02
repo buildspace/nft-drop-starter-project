@@ -27,6 +27,7 @@ const MAX_CREATOR_LEN = 32 + 1 + 1;
 const CandyMachine = ({ walletAddress }) => {
   // States
   const [mints, setMints] = useState([]);
+  const [machineStats, setMachineStats] = useState(null);
 
   // Actions
   const fetchHashTable = async (hash, metadataEnabled) => {
@@ -266,56 +267,6 @@ const CandyMachine = ({ walletAddress }) => {
       programId: SPL_ASSOCIATED_TOKEN_ACCOUNT_PROGRAM_ID,
       data: Buffer.from([]),
     });
-  };
-
-  // Render Methods
-  const renderMintedItems = () => (
-    <div className="gif-container">
-      <p className="sub-text">Minted Items ✨</p>
-      <div className="gif-grid">
-        {mints.map((mint) => (
-          <div className="gif-item" key={mint}>
-            <img src={mint} alt={`Minted NFT ${mint}`} />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-
-  const renderDropTimer = () => {
-    // If the current date is before the drop date show this
-    const currentDate = new Date();
-    const dropDate = new Date(machineStats.goLiveData * 1000);
-
-    if (currentDate < dropDate) {
-      console.log('Before drop date!');
-      return <CountdownTimer dropDate={dropDate} />;
-    }
-
-    return <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>;
-  };
-
-  const renderAvailableNFTs = () => {
-    const currentDate = new Date();
-    const dropDate = new Date(machineStats.goLiveData * 1000);
-
-    if (
-      currentDate < dropDate &&
-      machineStats.itemsRedeemed !== machineStats.itemsAvailable
-    ) {
-      return null;
-    }
-
-    return (
-      <>
-        <p>{`Items Minted: ${machineStats.itemsRedeemed} / ${machineStats.itemsAvailable}`}</p>
-        <button className="cta-button mint-button" onClick={mintToken}>
-          Mint NFT
-        </button>
-        {mints.length > 0 && renderMintedItems()}
-        {isLoadingMints && <p>LOADING MINTS...</p>}
-      </>
-    );
   };
 
   return (
