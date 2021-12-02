@@ -27,7 +27,6 @@ const MAX_CREATOR_LEN = 32 + 1 + 1;
 const CandyMachine = ({ walletAddress }) => {
   // States
   const [mints, setMints] = useState([]);
-  const [machineStats, setMachineStats] = useState(null);
 
   // Actions
   const fetchHashTable = async (hash, metadataEnabled) => {
@@ -258,15 +257,13 @@ const CandyMachine = ({ walletAddress }) => {
   };
 
   return (
-    machineStats && (
-      <div className="machine-container">
-        <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>
-        <p>{`Items Minted: ${machineStats.itemsRedeemed} / ${machineStats.itemsAvailable}`}</p>
-        <button className="cta-button mint-button" onClick={mintToken}>
-          Mint NFT
-        </button>
-      </div>
-    )
+    <div className="machine-container">
+      <p>Drop Date:</p>
+      <p>Items Minted:</p>
+      <button className="cta-button mint-button" onClick={mintToken}>
+        Mint NFT
+      </button>
+    </div>
   );
 };
 
