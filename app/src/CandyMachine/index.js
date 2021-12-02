@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Connection, PublicKey } from '@solana/web3.js';
 import { Program, Provider, web3 } from '@project-serum/anchor';
 import { MintLayout, TOKEN_PROGRAM_ID, Token } from '@solana/spl-token';
@@ -25,9 +25,6 @@ const MAX_SYMBOL_LENGTH = 10;
 const MAX_CREATOR_LEN = 32 + 1 + 1;
 
 const CandyMachine = ({ walletAddress }) => {
-  // States
-  const [mints, setMints] = useState([]);
-
   // Actions
   const fetchHashTable = async (hash, metadataEnabled) => {
     const connection = new web3.Connection(
