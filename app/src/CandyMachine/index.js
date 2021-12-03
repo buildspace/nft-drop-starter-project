@@ -71,8 +71,6 @@ const CandyMachine = ({ walletAddress }) => {
     return mintHashes;
   };
 
-  const getCandyMachineState = async () => {};
-
   const getMetadata = async (mint) => {
     return (
       await PublicKey.findProgramAddress(
@@ -195,7 +193,6 @@ const CandyMachine = ({ walletAddress }) => {
             const { result } = notification;
             if (!result.err) {
               console.log('NFT Minted!');
-              await getCandyMachineState();
             }
           }
         },
