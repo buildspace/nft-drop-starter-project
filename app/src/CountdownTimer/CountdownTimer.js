@@ -5,7 +5,9 @@ const CountdownTimer = ({ dropDate }) => {
     // State
     const [timerString, setTimerString] = useState('');
 
-    useEffect(() => {
+//Ya-*Je
+
+    useEffect((dropDate) => {
         console.log('Setting interval...');
 
         // Use setInterval to run this piece of code every second
@@ -37,7 +39,7 @@ const CountdownTimer = ({ dropDate }) => {
                 clearInterval(interval);
             }
         };
-    }, []);
+    }, [dropDate]);
 
     return (
         <div className="timer-container">
