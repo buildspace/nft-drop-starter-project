@@ -55,6 +55,7 @@ const CandyMachine = ({walletAddress}) => {
 
 
 
+
         const provider = getProvider();
 
         // Get metadata about your deployed candy machine program
@@ -379,7 +380,7 @@ const CandyMachine = ({walletAddress}) => {
         if (currentDate < dropDate) {
             console.log('Before drop date!');
             // Don't forget to pass over your dropDate!
-            return <CountdownTimer dropDate={dropDate} />;
+            // return <CountdownTimer dropDate={dropDate} />;
         }
 
         // Else let's just return the current drop date
