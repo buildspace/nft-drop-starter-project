@@ -3,6 +3,11 @@
   flex-direction: column;
 }
 
+.machine-container p {
+  color: aquamarine;
+  /*background-image: url("cool-backgroung.png");*/
+}
+
 .gif-container {
   display: flex;
   flex-direction: column;
