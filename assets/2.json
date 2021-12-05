@@ -1,0 +1,19 @@
+{
+  "name": "Lupin hiding in a dark street",
+  "symbol": "LUP",
+  "image": "2.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "2.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "A8ZkP2GqjwgB3AU7hksymuv1oewJTFUjP1VfYFKiEqhe",
+        "share": 100
+      }
+    ]
+  }
+}
