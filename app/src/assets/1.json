@@ -1,0 +1,19 @@
+{
+  "name": "vintage-pinup-87in",
+  "symbol": "",
+  "image": "1.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "1.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "94gkhTqGDpxrcAygS8Qyagj9EkRuZyeYRmZwV6Hang3x",
+        "share": 100
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "vintage-pinup-54er",
+  "symbol": "",
+  "image": "2.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "2.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "94gkhTqGDpxrcAygS8Qyagj9EkRuZyeYRmZwV6Hang3x",
+        "share": 100
+      }
+    ]
+  }
+}
