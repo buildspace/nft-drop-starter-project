@@ -1,0 +1,23 @@
+{
+  "name": "Ivysaur",
+  "symbol": "",
+  "image": "1.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "1.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "HwUcHhjzmc2BVir3LkKuoSLRaPBKdqjcexTAyrA5kmGE",
+        "share": 100
+      }
+    ]
+  },
+  "collection": {
+    "name": "Pokémon on Solana OGs",
+    "family": "Pokémon on Solana"
+  }
+}

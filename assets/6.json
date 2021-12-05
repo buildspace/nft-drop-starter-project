@@ -1,0 +1,23 @@
+{
+  "name": "Squirtle",
+  "symbol": "",
+  "image": "6.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "6.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "HwUcHhjzmc2BVir3LkKuoSLRaPBKdqjcexTAyrA5kmGE",
+        "share": 100
+      }
+    ]
+  },
+  "collection": {
+    "name": "Pokémon on Solana OGs",
+    "family": "Pokémon on Solana"
+  }
+}

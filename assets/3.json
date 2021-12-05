@@ -1,0 +1,23 @@
+{
+  "name": "Charmander",
+  "symbol": "",
+  "image": "3.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "3.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "HwUcHhjzmc2BVir3LkKuoSLRaPBKdqjcexTAyrA5kmGE",
+        "share": 100
+      }
+    ]
+  },
+  "collection": {
+    "name": "Pokémon on Solana OGs",
+    "family": "Pokémon on Solana"
+  }
+}

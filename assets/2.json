@@ -1,0 +1,23 @@
+{
+  "name": "Venusaur",
+  "symbol": "",
+  "image": "2.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "2.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "HwUcHhjzmc2BVir3LkKuoSLRaPBKdqjcexTAyrA5kmGE",
+        "share": 100
+      }
+    ]
+  },
+  "collection": {
+    "name": "Pokémon on Solana OGs",
+    "family": "Pokémon on Solana"
+  }
+}
