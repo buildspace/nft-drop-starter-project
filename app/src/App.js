@@ -1,4 +1,7 @@
-import React, { useEffect } from 'react';
+import React, {
+  useEffect,
+  useState,
+} from 'react';
 import './App.css';
 import twitterLogo from './assets/twitter-logo.svg';
 
@@ -7,18 +10,25 @@ const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
-  // Actions
 
-  /*
-  * Declare your function
-  */
+  // Store wallet data in a React state to be used as a flag to determine
+  // if we should show or hide the button.
+  const [walletAddress, setWalletAddress] = useState(null);
   const checkIfWalletIsConnected = async () => {
     try {
       const { solana } = window;
 
       if (solana) {
         if (solana.isPhantom) {
+
           console.log('Phantom wallet found!');
+          const response = await solana.connect();
+          console.log(
+            'Connected with Public Key:',
+            response.publicKey.toString()
+          );
+          setWalletAddress(response.publicKey.toString());
+
         }
       } else {
         alert('Solana object not found! Get a Phantom Wallet 👻');
@@ -29,9 +39,24 @@ const App = () => {
   };
 
   /*
-   * When our component first mounts, let's check to see if we have a connected
-   * Phantom Wallet
+   * Let's define this method so our code doesn't break.
+   * We will write the logic for this next!
    */
+  const connectWallet = async () => {};
+
+  /*
+   * We want to render this UI when the user hasn't connected
+   * their wallet to our app yet.
+   */
+  const renderNotConnectedContainer = () => (
+    <button
+      className="cta-button connect-wallet-button"
+      onClick={connectWallet}
+    >
+      Connect to Wallet
+    </button>
+  );
+
   useEffect(() => {
     const onLoad = async () => {
       await checkIfWalletIsConnected();
@@ -46,6 +71,8 @@ const App = () => {
         <div className="header-container">
           <p className="header">🍭 Candy Drop</p>
           <p className="sub-text">NFT drop machine with fair mint</p>
+          {/* Add the condition to show this only if we don't have a wallet address */}
+          {!walletAddress && renderNotConnectedContainer()}
         </div>
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
