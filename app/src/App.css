@@ -1,9 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .App {
   height: 100vh;
   background-color: rgb(20, 20, 20);
   overflow: scroll;
   text-align: center;
   overflow: hidden;
+
+  background: #424242 url('assets/body_bg.png');
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  color: #fff;
+}
+
+button {
+  font-family: inherit;
 }
 
 .container {
@@ -32,6 +43,14 @@
   margin: 0;
   font-size: 50px;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .icon {
+  margin-top: -15px;
+  margin-right: 30px;
 }
 
 .sub-text {
@@ -58,8 +77,8 @@
 }
 
 .connect-wallet-button {
-  color: white;
-  background: -webkit-linear-gradient(left, #ff8867, #ff52ff);
+  color: #222224;
+  background: -webkit-linear-gradient(left, #ee1515, #ffffff);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
 }
