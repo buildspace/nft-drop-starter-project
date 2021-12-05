@@ -84,7 +84,8 @@ button {
 }
 
 .mint-button {
-  background: -webkit-linear-gradient(left, #4e44ce, #35aee2);
+  color: #222224;
+  background: -webkit-linear-gradient(left, #ee1515, #ffffff);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
   margin-left: 10px;
