@@ -38,7 +38,7 @@ useEffect(() => {
         clearInterval(interval);
       }
     };
-  }, []);
+  }, [dropDate]);
 
   return (
     <div className="timer-container">
