@@ -33,6 +33,8 @@ const CandyMachine = ({ walletAddress }) => {
   // Set a state variable. Call the setMachineStats to set the data.
   const [machineStats, setMachineStats] = useState({});
 
+  const [mints, setMints] = useState([]);
+
   // Actions
   const fetchHashTable = async (hash, metadataEnabled) => {
     const connection = new web3.Connection(
@@ -258,6 +260,19 @@ const CandyMachine = ({ walletAddress }) => {
     });
   };
 
+  const renderMintedItems = () => (
+    <div className="gif-container">
+      <p className="sub-text">Minted Items ✨</p>
+      <div className="gif-grid">
+        {mints.map((mint) => (
+          <div className="gif-item" key={mint}>
+            <img src={mint} alt={`Minted NFT ${mint}`} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+  
   const getProvider = () => {
     const rpcHost = process.env.REACT_APP_SOLANA_RPC_HOST;
     // Create a new connection object
@@ -313,6 +328,31 @@ const CandyMachine = ({ walletAddress }) => {
       goLiveData,
       goLiveDateTimeString,
     });
+
+    // Fetch all the accounts that have a minted NFT on this program and
+    // return the Token URI's which point to our metadata for that NFT.
+    const data = await fetchHashTable(
+      process.env.REACT_APP_CANDY_MACHINE_ID,
+      true
+    );
+
+    if (data.length !== 0) {
+      for (const mint of data) {
+        /**
+        Loop through every mint and get the Token URI. Once we get that URI
+        we can fetch the json file and then parse out the asset address of
+        our NFT.
+        **/
+        const response = await fetch(mint.data.uri);
+        const parse = await response.json();
+        console.log("Past Minted NFT", mint)
+
+        // Get image URI
+        if (!mints.find((mint) => mint === parse.image)) {
+          setMints((prevState) => [...prevState, parse.image]);
+        }
+      }
+    }
   };
 
   useEffect(() => {
@@ -326,6 +366,8 @@ const CandyMachine = ({ walletAddress }) => {
       <button className="cta-button mint-button" onClick={mintToken}>
         Mint NFT
       </button>
+      {/* If we have mints available in our array, let's render some items */}
+      {mints.length > 0 && renderMintedItems()}
     </div>
   );
 };
