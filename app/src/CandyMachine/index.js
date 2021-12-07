@@ -34,6 +34,9 @@ const CandyMachine = ({ walletAddress }) => {
   const [machineStats, setMachineStats] = useState({});
 
   const [mints, setMints] = useState([]);
+  // Loading states
+  const [isMinting, setIsMinting] = useState(false);
+  const [isLoadingMints, setIsLoadingMints] = useState(false);
 
   // Actions
   const fetchHashTable = async (hash, metadataEnabled) => {
@@ -119,6 +122,10 @@ const CandyMachine = ({ walletAddress }) => {
 
   const mintToken = async () => {
     try {
+      // Update the `isMinting` property. This one is going to tell us when
+      // there is a mint in progress
+      setIsMinting(true);
+
       const mint = web3.Keypair.generate();
       const token = await getTokenWallet(
         walletAddress.publicKey,
@@ -193,7 +200,7 @@ const CandyMachine = ({ walletAddress }) => {
 
       console.log('txn:', txn);
 
-      // Setup listener
+      // Setup Event listener
       connection.onSignatureWithOptions(
         txn,
         async (notification, context) => {
@@ -203,6 +210,9 @@ const CandyMachine = ({ walletAddress }) => {
             const { result } = notification;
             if (!result.err) {
               console.log('NFT Minted!');
+              // Set our flag to false as our NFT has been minted!
+              setIsMinting(false);
+              await getCandyMachineState();
             }
           }
         },
@@ -210,6 +220,9 @@ const CandyMachine = ({ walletAddress }) => {
       );
     } catch (error) {
       let message = error.msg || 'Minting failed! Please try again!';
+
+      // If we have an error set our loading flag to false
+      setIsMinting(false);
 
       if (!error.msg) {
         if (error.message.indexOf('0x138')) {
@@ -272,7 +285,7 @@ const CandyMachine = ({ walletAddress }) => {
       </div>
     </div>
   );
-  
+
   const getProvider = () => {
     const rpcHost = process.env.REACT_APP_SOLANA_RPC_HOST;
     // Create a new connection object
@@ -329,6 +342,9 @@ const CandyMachine = ({ walletAddress }) => {
       goLiveDateTimeString,
     });
 
+    // Set loading flag.
+    setIsLoadingMints(true);
+
     // Fetch all the accounts that have a minted NFT on this program and
     // return the Token URI's which point to our metadata for that NFT.
     const data = await fetchHashTable(
@@ -353,6 +369,10 @@ const CandyMachine = ({ walletAddress }) => {
         }
       }
     }
+
+    // Remove loading flag.
+    setIsLoadingMints(false);
+
   };
 
   useEffect(() => {
@@ -360,15 +380,22 @@ const CandyMachine = ({ walletAddress }) => {
   }, []);
 
   return (
-    <div className="machine-container">
-      <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>
-      <p>{`Items Minted: ${machineStats.itemsRedeemed} / ${machineStats.itemsAvailable}`}</p>
-      <button className="cta-button mint-button" onClick={mintToken}>
-        Mint NFT
-      </button>
-      {/* If we have mints available in our array, let's render some items */}
-      {mints.length > 0 && renderMintedItems()}
-    </div>
+    machineStats && (
+      <div className="machine-container">
+        <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>
+        <p>{`Items Minted: ${machineStats.itemsRedeemed} / ${machineStats.itemsAvailable}`}</p>
+        <button
+          className="cta-button mint-button"
+          onClick={mintToken}
+          disabled={isMinting}
+        >
+          Mint NFT
+        </button>
+        {isLoadingMints && <p>LOADING MINTS...</p>}
+        {/* If we have mints available in our array, let's render some items */}
+        {mints.length > 0 && renderMintedItems()}
+      </div>
+    )
   );
 };
 
