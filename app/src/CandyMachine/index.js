@@ -341,11 +341,6 @@ const CandyMachine = ({ walletAddress }) => {
       data: Buffer.from([]),
     });
   };
-  
-
-  useEffect(() => {
-    getCandyMachineState();
-  }) 
 
   const renderMintedItems = () => (
     <div className="gif-container">
@@ -369,8 +364,23 @@ const CandyMachine = ({ walletAddress }) => {
     if (currentDate < dropDate) {
       console.log('Before drop date!');
       return <CountdownTimer dropDate={dropDate} />;
-    } else {
-      return (<div>
+    } 
+
+    // Else let's just return the current drop date
+    return <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>
+  }
+
+  useEffect(() => {
+    getCandyMachineState();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []) 
+
+  return (
+    // Only show this if machineStats is available
+    machineStats && (
+      <div className="machine-container">
+        {renderDropTimer()}
+        <div>
         <p>{`Items Minted: ${machineStats.itemsRedeemed} / ${machineStats.itemsAvailable}`}</p>
           {machineStats.itemsRedeemed === machineStats.itemsAvailable ? (
             <p className="sub-text">Sold out 🙊</p>
@@ -385,18 +395,7 @@ const CandyMachine = ({ walletAddress }) => {
           )}
         {isLoadingMints && <p>LOADING MINTS...</p>}
         {mints.length > 0 && renderMintedItems()}
-      </div>)
-    }
-
-    // Else let's just return the current drop date
-    // return <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>
-  }
-
-  return (
-    // Only show this if machineStats is available
-    machineStats && (
-      <div className="machine-container">
-        {renderDropTimer()}
+        </div>
       </div>
     )
   );
