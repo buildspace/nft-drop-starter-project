@@ -1,0 +1,19 @@
+{
+  "name": "CUCO_0_TANJIRO_KAMADO",
+  "symbol": "",
+  "image": "0.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "0.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "DnLM1yPGuri2kuBY2LTsK3WrttcWaGy8aSVNAKw7CgnU",
+        "share": 100
+      }
+    ]
+  }
+}
