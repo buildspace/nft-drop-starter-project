@@ -188,7 +188,7 @@ const CandyMachine = ({ walletAddress }) => {
         txn,
         async (notification, context) => {
           if (notification.type === 'status') {
-            console.log('Receievd status event');
+            console.log('Received status event');
 
             const { result } = notification;
             if (!result.err) {
