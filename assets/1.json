@@ -1,0 +1,19 @@
+{
+    "name": "MESSI_PES",
+    "symbol": "",
+    "image": "1.png",
+    "properties": {
+      "files": [
+        {
+          "uri": "1.png",
+          "type": "image/png"
+        }
+      ],
+      "creators": [
+        {
+          "address": "3CJUvKhRxKbqBJdYep9Qpn4SvYvd7Q2uk8paUmz3hw29",
+          "share": 100
+        }
+      ]
+    }
+  }

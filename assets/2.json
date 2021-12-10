@@ -1,0 +1,19 @@
+{
+    "name": "VAMO_A_JUGAR",
+    "symbol": "",
+    "image": "2.png",
+    "properties": {
+      "files": [
+        {
+          "uri": "2.png",
+          "type": "image/png"
+        }
+      ],
+      "creators": [
+        {
+          "address": "3CJUvKhRxKbqBJdYep9Qpn4SvYvd7Q2uk8paUmz3hw29",
+          "share": 100
+        }
+      ]
+    }
+  }

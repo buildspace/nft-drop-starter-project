@@ -1,0 +1,19 @@
+{
+    "name": "MESSI_CHIQUITO",
+    "symbol": "",
+    "image": "0.png",
+    "properties": {
+      "files": [
+        {
+          "uri": "0.png",
+          "type": "image/png"
+        }
+      ],
+      "creators": [
+        {
+          "address": "3CJUvKhRxKbqBJdYep9Qpn4SvYvd7Q2uk8paUmz3hw29",
+          "share": 100
+        }
+      ]
+    }
+  }
