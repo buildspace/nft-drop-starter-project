@@ -1,0 +1,28 @@
+{
+  "program": {
+    "uuid": "9WCSFs",
+    "config": "9WCSFsTgHc4uG6Cu9gm1eb8ku6jFNPsA48Xr3uCRaVv3"
+  },
+  "items": {
+    "0": {
+      "link": "https://arweave.net/8yukervC8Z5bnuktwtzXECP84O-E3CFZt5QrRoKsP9U",
+      "name":"NFT 0",
+      "onChain":true
+    },
+    "1": {
+      "link": "https://arweave.net/5br4gM0fx1NgxwkWDJEuPivTCb2laHfOy4ZQ1c82i4Y",
+      "name":"NFT 1",
+      "onChain":true
+    },
+    "2": {
+      "link": "https://arweave.net/4tpOvbuJ7FPWQv16SishJD22ggnK4UQoQC-_tobLeIU",
+      "name":"NFT 2",
+      "onChain":true
+    }
+  },
+  "env": "devnet",
+  "cacheName":"temp",
+  "authority":"7iSqvxmB3duYMjwqwiZvxHjyc9wr536nMSbTv2t6Lz5H",
+  "candyMachineAddress":"D66pnPNFmRaSFXK5QUTLcFme7wwPiRWDpXbheqKrWs4n",
+  "startDate":1638317520
+}
