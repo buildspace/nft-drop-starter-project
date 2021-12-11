@@ -24,7 +24,7 @@ const MAX_URI_LENGTH = 200;
 const MAX_SYMBOL_LENGTH = 10;
 const MAX_CREATOR_LEN = 32 + 1 + 1;
 
-const CandyMachine = ({ walletAddress }) => {
+const CandyMachine = ({ wallet }) => {
   // Actions
   const fetchHashTable = async (hash, metadataEnabled) => {
     const connection = new web3.Connection(
@@ -111,7 +111,7 @@ const CandyMachine = ({ walletAddress }) => {
     try {
       const mint = web3.Keypair.generate();
       const token = await getTokenWallet(
-        walletAddress.publicKey,
+        wallet.publicKey,
         mint.publicKey
       );
       const metadata = await getMetadata(mint.publicKey);
@@ -125,13 +125,12 @@ const CandyMachine = ({ walletAddress }) => {
       const accounts = {
         config,
         candyMachine: process.env.REACT_APP_CANDY_MACHINE_ID,
-        payer: walletAddress.publicKey,
         wallet: process.env.REACT_APP_TREASURY_ADDRESS,
         mint: mint.publicKey,
         metadata,
         masterEdition,
-        mintAuthority: walletAddress.publicKey,
-        updateAuthority: walletAddress.publicKey,
+        mintAuthority: wallet.publicKey,
+        updateAuthority: wallet.publicKey,
         tokenMetadataProgram: TOKEN_METADATA_PROGRAM_ID,
         tokenProgram: TOKEN_PROGRAM_ID,
         systemProgram: SystemProgram.programId,
@@ -142,7 +141,7 @@ const CandyMachine = ({ walletAddress }) => {
       const signers = [mint];
       const instructions = [
         web3.SystemProgram.createAccount({
-          fromPubkey: walletAddress.publicKey,
+          fromPubkey: wallet.publicKey,
           newAccountPubkey: mint.publicKey,
           space: MintLayout.span,
           lamports: rent,
@@ -152,20 +151,20 @@ const CandyMachine = ({ walletAddress }) => {
           TOKEN_PROGRAM_ID,
           mint.publicKey,
           0,
-          walletAddress.publicKey,
-          walletAddress.publicKey
+          wallet.publicKey,
+          wallet.publicKey
         ),
         createAssociatedTokenAccountInstruction(
           token,
-          walletAddress.publicKey,
-          walletAddress.publicKey,
+          wallet.publicKey,
+          wallet.publicKey,
           mint.publicKey
         ),
         Token.createMintToInstruction(
           TOKEN_PROGRAM_ID,
           mint.publicKey,
           token,
-          walletAddress.publicKey,
+          wallet.publicKey,
           [],
           1
         ),
@@ -180,8 +179,6 @@ const CandyMachine = ({ walletAddress }) => {
         signers,
         instructions,
       });
-
-      console.log('txn:', txn);
 
       // Setup listener
       connection.onSignatureWithOptions(
