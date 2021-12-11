@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Connection, PublicKey } from '@solana/web3.js';
 import { Program, Provider, web3 } from '@project-serum/anchor';
 import { MintLayout, TOKEN_PROGRAM_ID, Token } from '@solana/spl-token';
@@ -58,11 +58,66 @@ const CandyMachine = ({ walletAddress }) => {
       }
     );
 
+    useEffect(() => {
+      getCandyMachineState();
+    }, []);	
+  }
+
+  const getProvider = () => {
+    const rpcHost = process.env.REACT_APP_SOLANA_RPC_HOST;
+    // Create a new connection object
+    const connection = new Connection(rpcHost);
+    
+    // Create a new Solana provider object
+    const provider = new Provider(
+      connection,
+      window.solana,
+      opts.preflightCommitment
+    );
+  
+    return provider;
+  };
+
+  // Declare getCandyMachineState as an async method
+const getCandyMachineState = async () => { 
+  const provider = getProvider();
+  
+  // Get metadata about your deployed candy machine program
+  const idl = await Program.fetchIdl(candyMachineProgram, provider);
+
+  // Create a program that you can call
+  const program = new Program(idl, candyMachineProgram, provider);
+
+  // Fetch the metadata from your candy machine
+  const candyMachine = await program.account.candyMachine.fetch(
+    process.env.REACT_APP_CANDY_MACHINE_ID
+  );
+  
+  // Parse out all our metadata and log it out
+  const itemsAvailable = candyMachine.data.itemsAvailable.toNumber();
+  const itemsRedeemed = candyMachine.itemsRedeemed.toNumber();
+  const itemsRemaining = itemsAvailable - itemsRedeemed;
+  const goLiveData = candyMachine.data.goLiveDate.toNumber();
+
+  // We will be using this later in our UI so let's generate this now
+  const goLiveDateTimeString = `${new Date(
+    goLiveData * 1000
+  ).toGMTString()}`
+
+  console.log({
+    itemsAvailable,
+    itemsRedeemed,
+    itemsRemaining,
+    goLiveData,
+    goLiveDateTimeString,
+  });
+};
+
     const mintHashes = [];
 
     for (let index = 0; index < metadataAccounts.length; index++) {
       const account = metadataAccounts[index];
-      const accountInfo = await connection.getParsedAccountInfo(account.pubkey);
+      const accountInfo = await Connection.getParsedAccountInfo(account.pubkey);
       const metadata = new Metadata(hash.toString(), accountInfo.value);
       if (metadataEnabled) mintHashes.push(metadata.data);
       else mintHashes.push(metadata.data.mint);
