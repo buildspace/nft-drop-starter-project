@@ -1,0 +1,19 @@
+{
+    "name": "Street_Music",
+    "symbol": "",
+    "image": "1.png",
+    "properties": {
+      "files": [
+        {
+          "uri": "1.png",
+          "type": "image/png"
+        }
+      ],
+      "creators": [
+        {
+          "address": "3Dw54eV994zdroGYe17K91anhNhsVRmBxXJCabG8piJr",
+          "share": 100
+        }
+      ]
+    }
+  }

@@ -1,0 +1,19 @@
+{
+    "name": "Red_Roses",
+    "symbol": "",
+    "image": "0.png",
+    "properties": {
+      "files": [
+        {
+          "uri": "0.png",
+          "type": "image/png"
+        }
+      ],
+      "creators": [
+        {
+          "address": "3Dw54eV994zdroGYe17K91anhNhsVRmBxXJCabG8piJr",
+          "share": 100
+        }
+      ]
+    }
+  }

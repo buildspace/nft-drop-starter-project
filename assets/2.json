@@ -1,0 +1,19 @@
+{
+    "name": "Unicorn",
+    "symbol": "",
+    "image": "2.png",
+    "properties": {
+      "files": [
+        {
+          "uri": "2.png",
+          "type": "image/png"
+        }
+      ],
+      "creators": [
+        {
+          "address": "3Dw54eV994zdroGYe17K91anhNhsVRmBxXJCabG8piJr",
+          "share": 100
+        }
+      ]
+    }
+  }
