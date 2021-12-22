@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import twitterLogo from "./assets/twitter-logo.svg";
+import CandyMachine from "./CandyMachine";
 
 // Constants
-const TWITTER_HANDLE = "_buildspace";
+const TWITTER_HANDLE = "colburncodesx";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
@@ -25,11 +26,7 @@ const App = () => {
           const response = await solana.connect({
             onlyIfTrusted: true,
           });
-          console.log(
-            "Connected with Public Key:",
-            response.publicKey.toString()
-          );
-          
+
           setWalletAddress(response.publicKey.toString());
         }
       } else {
@@ -46,7 +43,7 @@ const App = () => {
    */
   const connectWallet = async () => {
     const { solana } = window;
-    if(solana) {
+    if (solana) {
       const response = await solana.connect();
       console.log("Connected with Public Key:", response.publicKey.toString());
       setWalletAddress(response.publicKey.toString());
@@ -78,10 +75,21 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header">🍭 Candy Drop</p>
+          <p className="header">
+            Apex{" "}
+            <img
+              src="https://emoji.gg/assets/emoji/8376_Apex_Legends_Bloohound.png"
+              width="64px"
+              height="64px"
+              alt="Apex_Legends_Bloohound"
+            />{" "}
+            Drop
+          </p>
           <p className="sub-text">NFT drop machine with fair mint</p>
           {!walletAddress && renderNotConnectedContainer()}
         </div>
+        {/* Check for walletAddress and then pass in walletAddress */}
+        {walletAddress && <CandyMachine walletAddress={window.solana} />}
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
           <a
@@ -89,7 +97,7 @@ const App = () => {
             href={TWITTER_LINK}
             target="_blank"
             rel="noreferrer"
-          >{`built on @${TWITTER_HANDLE}`}</a>
+          >{`built by @${TWITTER_HANDLE}`}</a>
         </div>
       </div>
     </div>
