@@ -1,0 +1,19 @@
+{
+  "name": "Caustic",
+  "symbol": "",
+  "image": "1.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "1.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "H46cXDeG22tTEJTVbeUjjEqG4z5zT6C7UPVuU9Xhh84E",
+        "share": 100
+      }
+    ]
+  }
+}
