@@ -4,42 +4,51 @@ import twitterLogo from './assets/twitter-logo.svg';
 
 // Constants
 const TWITTER_HANDLE = '_buildspace';
-const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
+const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`
 
 const App = () => {
- //Actions
-  
-  /*
-  * Declare your function
-  */
-  Const checkIfWalletIsConnected = async () => {
-    try {
-      const { solana } = window;
-      
-      if (solana) {
-        if (solana.isPhantom) {
-          console.log('Phantom wallet found!');
-        }
-      }else {
-        alert('Solana object not found! Get a Phantom Wallet 👻');
-      }
-    } cath (error) {
-      console.error(error);
+ const checkIfWalletIsConnected = async () => {
+  try {
+   const { solana } = window;
+   
+   if (solana) {
+    if (solana.isPhantom) {
+     console.log('Phantom wallet found!');
+     const response = await solana.connect({ onlyIfTrusted: true});
+     console.log(
+      'Connected with Public Key:',
+      response.publicKey.tostring()
+      );
     }
-  };
-  
-  /*
-   * When our component first mounts, let's check to see if we have a connected
-   * Phantom Wallet
+   } else {
+     alert('Solana object not found! Get Phantom Wallet 👻');
+   }
+  } cath (error) {
+    console.error(error);
+  }
+ };
+ 
+   /*
+   * Let's define this method so our code doesn't break.
+   * We will write the logic for this next!
    */
-  use Effect(() => {
-    const onLoad = async () => {
-      await checkIfWalletIsConnected();
-    };
-    window.addEventListener('load', onLoad);
-    return () => window.removeEventListener('load', onLoad);
-  }, []);
-              
+ const connectWallet = async () => {};
+ 
+ /*
+ * We want to render this UI when the user hasn´t connected
+ *their wallet to our app yet
+ */
+ const renderNotConnectedContainer = () => (
+  </button>
+  );
+ 
+ useEffect(() => {
+  const onLoad = async () => {
+   await checkIfWalletIsConnected();
+  };
+  window.addEventListener('Load', onLoad);
+ }, []);
+           
   return (
     <div className="App">
       <div className="container">
