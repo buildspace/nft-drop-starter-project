@@ -1,0 +1,19 @@
+{
+  "name": "I_HAD_TO_LEAVE_1",
+  "symbol": "",
+  "image": "1.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "1.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "DfXyFGo6GWMuWKVT2RNADufEg3paZZaWvJkMVcvZUAsj",
+        "share": 100
+      }
+    ]
+  }
+}
