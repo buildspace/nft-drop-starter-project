@@ -1,0 +1,20 @@
+{
+  "name": "NFT2",
+  "symbol": "",
+  "seller_fee_basis_points": 0,
+  "image": "2.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "2.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "kBmQ5JYvDqpTExbFJC1C5XJNmroqSHaoBhXseHLDFk4",
+        "share": 100
+      }
+    ]
+  }
+}
