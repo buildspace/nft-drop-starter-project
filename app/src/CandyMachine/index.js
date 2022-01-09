@@ -22,23 +22,6 @@ const opts = {
 
 const CandyMachine = ({ walletAddress }) => {
 
-  const wallet = useMemo(() => {
-    if(
-      !walletAddress ||
-      !walletAddress.publicKey ||
-      !walletAddress.signAllTransactions ||
-      !walletAddress.signTransaction
-    ){
-      return;
-    }
-
-    return {
-      publicKey: walletAddress.publicKey,
-      signAllTransactions: walletAddress.signAllTransactions,
-      signTransaction: walletAddress.signTransaction,
-    }
-  }, [walletAddress]);
-  
   const getCandyMachineCreator = async (candyMachine) => {
     const candyMachineID = new PublicKey(candyMachine);
     return await web3.PublicKey.findProgramAddress(
