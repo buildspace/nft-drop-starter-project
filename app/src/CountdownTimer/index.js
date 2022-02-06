@@ -39,7 +39,7 @@ const CountdownTimer = ({ dropDate }) => {
         clearInterval(interval);
       }
     };
-  }, []);
+  });
 
   console.log(timerString);
   return (
