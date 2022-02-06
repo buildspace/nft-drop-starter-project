@@ -1,0 +1,19 @@
+{
+  "name": "Starboy",
+  "symbol": "",
+  "image": "0.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "0.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "62CQqxgW7hJmNDKfiNAuiS6Y2tnUP9HmpZEvwEYo6jNL",
+        "share": 100
+      }
+    ]
+  }
+}

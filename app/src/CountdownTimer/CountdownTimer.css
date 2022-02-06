@@ -6,3 +6,7 @@
 .timer-container .timer-value {
   font-size: 18px;
 }
+
+timer-container p {
+  text-decoration: none;
+}

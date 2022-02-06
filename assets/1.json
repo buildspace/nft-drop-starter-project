@@ -1,0 +1,19 @@
+{
+  "name": "Beauty Behind the Madness",
+  "symbol": "",
+  "image": "1.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "1.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "62CQqxgW7hJmNDKfiNAuiS6Y2tnUP9HmpZEvwEYo6jNL",
+        "share": 100
+      }
+    ]
+  }
+}

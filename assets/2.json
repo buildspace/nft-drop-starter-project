@@ -1,0 +1,19 @@
+{
+  "name": "Dawn FM",
+  "symbol": "",
+  "image": "2.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "2.png",
+        "type": "image/png"
+      }
+    ],
+    "creators": [
+      {
+        "address": "62CQqxgW7hJmNDKfiNAuiS6Y2tnUP9HmpZEvwEYo6jNL",
+        "share": 100
+      }
+    ]
+  }
+}
