@@ -86,7 +86,7 @@ const CandyMachine = ({ walletAddress }) => {
     });
   };
 
-  const mintToken = async ({ candyMachine }) => {
+  const mintToken = async () => {
     const mint = web3.Keypair.generate();
 
     const userTokenAccountAddress = (
