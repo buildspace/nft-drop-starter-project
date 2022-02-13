@@ -1,0 +1,23 @@
+{
+    "name": "pakistani truck will take you for a ride",
+    "symbol": "",
+    "image": "4.png",
+    "properties": {
+        "files": [
+            {
+                "uri": "4.png",
+                "type": "image/png"
+            }
+        ],
+        "creators": [
+            {
+                "address": "EyaeWokaVaEvBFkxbTqNUkscoLasQExRDRByHaVMXRae",
+                "share": 100
+            }
+        ]
+    },
+    "collection": {
+        "name": "Lailaland",
+        "family": "Lailaland"
+    }
+}

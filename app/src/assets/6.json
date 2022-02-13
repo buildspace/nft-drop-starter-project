@@ -1,0 +1,23 @@
+{
+    "name": "williamsburg, brooklyn",
+    "symbol": "",
+    "image": "6.png",
+    "properties": {
+        "files": [
+            {
+                "uri": "6.png",
+                "type": "image/png"
+            }
+        ],
+        "creators": [
+            {
+                "address": "EyaeWokaVaEvBFkxbTqNUkscoLasQExRDRByHaVMXRae",
+                "share": 100
+            }
+        ]
+    },
+    "collection": {
+        "name": "Lailaland",
+        "family": "Lailaland"
+    }
+}
