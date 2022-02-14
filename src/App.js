@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import twitterLogo from './assets/twitter-logo.svg';
 import CandyMachine from './CandyMachine';
+import ImageGallery from 'react-image-gallery';
 
 // Constants
 const TWITTER_HANDLE = 'lailachima';
@@ -9,6 +10,33 @@ const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
   const [walletAddress, setWalletAddress] = useState(null);
+
+  const images = [
+    {
+      original: 'https://i.imgur.com/yxAKAQX.png',
+      thumbnail: 'https://i.imgur.com/yxAKAQX.png',
+      originalHeight: 0,
+      thumbnailHeight: 100,
+    },
+    {
+      original: 'https://i.imgur.com/9bGfUMc.png',
+      thumbnail: 'https://i.imgur.com/9bGfUMc.png',
+      originalHeight: 0,
+      thumbnailHeight: 100,
+    },
+    {
+      original: 'https://i.imgur.com/yxAKAQX.png',
+      thumbnail: 'https://i.imgur.com/yxAKAQX.png',
+      originalHeight: 0,
+      thumbnailHeight: 100,
+    },
+    {
+      original: 'https://i.imgur.com/9bGfUMc.png',
+      thumbnail: 'https://i.imgur.com/9bGfUMc.png',
+      originalHeight: 0,
+      thumbnailHeight: 100,
+    },
+  ];
 
   const checkIfWalletIsConnected = async () => {
     try {
@@ -25,7 +53,6 @@ const App = () => {
 
           setWalletAddress(response.publicKey.toString());
         }
-
       } else {
         alert('Solana object not found! Get a Phantom Wallet 👻');
       }
@@ -68,6 +95,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="container">
+        <ImageGallery items={images} showNav={false} showFullscreenButton={false} showPlayButton={false} />
         <div className="header-container">
           <p className="header">🍭 Lailaland</p>
           <p className="sub-text">First NFT drop powered by Winter. Be part of something epic!</p>
