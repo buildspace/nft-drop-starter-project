@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import { React, useEffect, useState } from 'react';
 import { Connection, PublicKey } from '@solana/web3.js';
 import { Program, Provider, web3 } from '@project-serum/anchor';
 import { MintLayout, TOKEN_PROGRAM_ID, Token } from '@solana/spl-token';
@@ -20,6 +20,8 @@ const opts = {
 };
 
 const CandyMachine = ({ walletAddress }) => {
+  const [candyMachine, setCandyMachine] = useState(null);
+
   useEffect(() => {
     getCandyMachineState();
   }, []);
@@ -52,6 +54,8 @@ const CandyMachine = ({ walletAddress }) => {
     const candyMachine = await program.account.candyMachine.fetch(
       process.env.REACT_APP_CANDY_MACHINE_ID
     );
+
+    setCandyMachine(candyMachine);
 
     // Parse out all our metadata and log it out
     const itemsAvailable = candyMachine.data.itemsAvailable.toNumber();
