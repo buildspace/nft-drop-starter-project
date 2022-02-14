@@ -1,0 +1,23 @@
+{
+    "name": "posh lahore",
+    "symbol": "LL",
+    "image": "5.png",
+    "properties": {
+        "files": [
+            {
+                "uri": "5.png",
+                "type": "image/png"
+            }
+        ],
+        "creators": [
+            {
+                "address": "EyaeWokaVaEvBFkxbTqNUkscoLasQExRDRByHaVMXRae",
+                "share": 100
+            }
+        ]
+    },
+    "collection": {
+        "name": "Lailaland",
+        "family": "Lailaland"
+    }
+}

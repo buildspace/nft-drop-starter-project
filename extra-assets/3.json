@@ -1,0 +1,23 @@
+{
+    "name": "burning man",
+    "symbol": "LL",
+    "image": "3.png",
+    "properties": {
+        "files": [
+            {
+                "uri": "3.png",
+                "type": "image/png"
+            }
+        ],
+        "creators": [
+            {
+                "address": "EyaeWokaVaEvBFkxbTqNUkscoLasQExRDRByHaVMXRae",
+                "share": 100
+            }
+        ]
+    },
+    "collection": {
+        "name": "Lailaland",
+        "family": "Lailaland"
+    }
+}

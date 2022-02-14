@@ -1,0 +1,23 @@
+{
+    "name": "lucid lisbon",
+    "symbol": "LL",
+    "image": "7.png",
+    "properties": {
+        "files": [
+            {
+                "uri": "7.png",
+                "type": "image/png"
+            }
+        ],
+        "creators": [
+            {
+                "address": "EyaeWokaVaEvBFkxbTqNUkscoLasQExRDRByHaVMXRae",
+                "share": 100
+            }
+        ]
+    },
+    "collection": {
+        "name": "Lailaland",
+        "family": "Lailaland"
+    }
+}
