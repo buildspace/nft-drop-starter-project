@@ -1,6 +1,7 @@
 .App {
   height: 100vh;
-  background-color: rgb(20, 20, 20);
+  background-color: #2b2b33;
+  /* background-color: rgb(20, 20, 20); */
   overflow: scroll;
   text-align: center;
   overflow: hidden;
