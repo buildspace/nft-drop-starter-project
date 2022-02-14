@@ -17,24 +17,31 @@ const App = () => {
       thumbnail: 'https://i.imgur.com/yxAKAQX.png',
       originalHeight: 0,
       thumbnailHeight: 160,
+      thumbnailClass: "thumbnail",
     },
     {
       original: 'https://i.imgur.com/9bGfUMc.png',
       thumbnail: 'https://i.imgur.com/9bGfUMc.png',
       originalHeight: 0,
       thumbnailHeight: 160,
+      thumbnailClass: "thumbnail",
+
     },
     {
       original: 'https://i.imgur.com/yxAKAQX.png',
       thumbnail: 'https://i.imgur.com/yxAKAQX.png',
       originalHeight: 0,
       thumbnailHeight: 160,
+      thumbnailClass: "thumbnail",
+
     },
     {
       original: 'https://i.imgur.com/9bGfUMc.png',
       thumbnail: 'https://i.imgur.com/9bGfUMc.png',
       originalHeight: 0,
       thumbnailHeight: 160,
+      thumbnailClass: "thumbnail",
+
     },
   ];
 

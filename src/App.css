@@ -112,6 +112,12 @@
   padding-top: 0;
 }
 
+.thumbnail {
+  margin: 0px 12px;
+  padding: 0px;
+  height: 100%;
+}
+
 .connected-container button {
   height: 50px;
 }
