@@ -16,32 +16,51 @@ const App = () => {
       original: 'https://i.imgur.com/yxAKAQX.png',
       thumbnail: 'https://i.imgur.com/yxAKAQX.png',
       originalHeight: 0,
-      thumbnailHeight: 160,
+      thumbnailHeight: 200,
       thumbnailClass: "thumbnail",
     },
     {
       original: 'https://i.imgur.com/9bGfUMc.png',
       thumbnail: 'https://i.imgur.com/9bGfUMc.png',
       originalHeight: 0,
-      thumbnailHeight: 160,
+      thumbnailHeight: 200,
       thumbnailClass: "thumbnail",
 
     },
     {
-      original: 'https://i.imgur.com/yxAKAQX.png',
-      thumbnail: 'https://i.imgur.com/yxAKAQX.png',
+      original: 'https://i.imgur.com/Vd2ZlXU.png',
+      thumbnail: 'https://i.imgur.com/Vd2ZlXU.png',
       originalHeight: 0,
-      thumbnailHeight: 160,
+      thumbnailHeight: 200,
       thumbnailClass: "thumbnail",
-
+    },
+    // {
+    //   original: 'https://i.imgur.com/wlg3GlG.png',
+    //   thumbnail: 'https://i.imgur.com/wlg3GlG.png',
+    //   originalHeight: 0,
+    //   thumbnailHeight: 200,
+    //   thumbnailClass: "thumbnail",
+    // },
+    {
+      original: 'https://i.imgur.com/ZS9NsrQ.png',
+      thumbnail: 'https://i.imgur.com/ZS9NsrQ.png',
+      originalHeight: 0,
+      thumbnailHeight: 200,
+      thumbnailClass: "thumbnail",
     },
     {
-      original: 'https://i.imgur.com/9bGfUMc.png',
-      thumbnail: 'https://i.imgur.com/9bGfUMc.png',
+      original: 'https://i.imgur.com/YvJ7DWc.png',
+      thumbnail: 'https://i.imgur.com/YvJ7DWc.png',
       originalHeight: 0,
-      thumbnailHeight: 160,
+      thumbnailHeight: 200,
       thumbnailClass: "thumbnail",
-
+    },
+    {
+      original: 'https://i.imgur.com/cElwZTM.png',
+      thumbnail: 'https://i.imgur.com/cElwZTM.png',
+      originalHeight: 0,
+      thumbnailHeight: 200,
+      thumbnailClass: "thumbnail",
     },
   ];
 
