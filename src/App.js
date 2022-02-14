@@ -106,7 +106,7 @@ const App = () => {
       className="cta-button connect-wallet-button"
       onClick={connectWallet}
     >
-      Connect to Wallet
+      Pay with Bank Account
     </button>
   );
 
@@ -124,7 +124,7 @@ const App = () => {
       <div className="container">
         <div className="header-container">
           <p className="header">✨ Lailaland</p>
-          <p className="sub-text">Collection of places I've seen and loved. Be part of something epic!</p>
+          <p className="sub-text">Beautiful places I've seen and loved. Check out the checkout!</p>
           {!walletAddress && renderNotConnectedContainer()}
         </div>
         {walletAddress && <CandyMachine walletAddress={window.solana} />}
