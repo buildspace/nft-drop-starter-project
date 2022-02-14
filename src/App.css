@@ -107,6 +107,11 @@
   margin: 50px auto;
 }
 
+.img-gallery {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 .connected-container button {
   height: 50px;
 }

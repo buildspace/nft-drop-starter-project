@@ -16,25 +16,25 @@ const App = () => {
       original: 'https://i.imgur.com/yxAKAQX.png',
       thumbnail: 'https://i.imgur.com/yxAKAQX.png',
       originalHeight: 0,
-      thumbnailHeight: 100,
+      thumbnailHeight: 160,
     },
     {
       original: 'https://i.imgur.com/9bGfUMc.png',
       thumbnail: 'https://i.imgur.com/9bGfUMc.png',
       originalHeight: 0,
-      thumbnailHeight: 100,
+      thumbnailHeight: 160,
     },
     {
       original: 'https://i.imgur.com/yxAKAQX.png',
       thumbnail: 'https://i.imgur.com/yxAKAQX.png',
       originalHeight: 0,
-      thumbnailHeight: 100,
+      thumbnailHeight: 160,
     },
     {
       original: 'https://i.imgur.com/9bGfUMc.png',
       thumbnail: 'https://i.imgur.com/9bGfUMc.png',
       originalHeight: 0,
-      thumbnailHeight: 100,
+      thumbnailHeight: 160,
     },
   ];
 
@@ -94,8 +94,8 @@ const App = () => {
 
   return (
     <div className="App">
+      <ImageGallery className="img-gallery" items={images} showNav={false} showFullscreenButton={false} showPlayButton={false} />
       <div className="container">
-        <ImageGallery items={images} showNav={false} showFullscreenButton={false} showPlayButton={false} />
         <div className="header-container">
           <p className="header">🍭 Lailaland</p>
           <p className="sub-text">First NFT drop powered by Winter. Be part of something epic!</p>
