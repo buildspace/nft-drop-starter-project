@@ -14,7 +14,7 @@
   padding: 0 30px 0 30px;
   color: white;
   position: relative;
-  /* background-color: #35aee2; */
+  background-color: #35aee2; 
 }
 
 .authed-container {
@@ -25,7 +25,7 @@
 }
 
 .header-container {
-  /* background-color: #60c657; */
+  /* background-color: #60c657; */ 
 }
 
 .header {
