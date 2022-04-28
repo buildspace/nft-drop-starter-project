@@ -1,0 +1,21 @@
+{
+"name": "Chipmunk_01",
+"symbol": "",
+"description": "Photographs of animals that Masaya himself took, this is a chipmunk",
+"image": "2.png",
+"properties": {
+  "files": [
+    {
+      "uri": "2.png",
+      "type": "image/png"
+    }
+  ],
+  "creators": [
+    {
+      "address": "CdWcSfRcCpzhzctmLd8vxySh5zuf4GyCR6HRsdbiLgtU",
+      "share": 100
+    }
+  ]
+},
+"collection": {"name": "Animals", "family": "Masayas-Photos"}
+}

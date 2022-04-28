@@ -1,0 +1,21 @@
+{
+"name": "Dog_01",
+"symbol": "",
+"description": "Photographs of animals that Masaya himself took, this is a dog",
+"image": "1.png",
+"properties": {
+  "files": [
+    {
+      "uri": "1.png",
+      "type": "image/png"
+    }
+  ],
+  "creators": [
+    {
+      "address": "CdWcSfRcCpzhzctmLd8vxySh5zuf4GyCR6HRsdbiLgtU",
+      "share": 100
+    }
+  ]
+},
+"collection": {"name": "Animals", "family": "Masayas-Photos"}
+}

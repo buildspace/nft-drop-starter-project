@@ -55,12 +55,17 @@ const App = () => {
       </button>
   )
 
+  function butthead(poop){
+    console.log(poop)
+  }
+
 
   //When our component first mounts, check if we have connected Phantom Wallet
   useEffect(() => {
     const onLoad = async () => {
       await checkIfWalletIsConnected();
     }
+    butthead('poop2')
 
     window.addEventListener('load', onLoad);
     return () => window.removeEventListener('load', onLoad)
