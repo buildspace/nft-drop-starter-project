@@ -34,7 +34,18 @@ const App = () => {
     }
   }
 
-  const connectWallet = async () => {}
+  // This function connects the user's wallet to the web app by 
+  // calling the connect() method on the solana object to handle auth
+  const connectWallet = async () => {
+    const { solana } = window;
+
+    if (solana) {
+      const response = await solana.connect()
+      console.log('Connected with Public Key:', response.publicKey.toString())
+      // Set publicKey in State to remove 'Connect Wallet' button
+      setWalletAddress(response.publicKey.toString())
+    }
+  }
 
   const renderNotConnectedContainer = () => (
     <button
