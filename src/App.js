@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import twitterLogo from './assets/twitter-logo.svg';
 
@@ -7,6 +7,8 @@ const TWITTER_HANDLE = '__iandc';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
+
+  const [walletAddress, setWalletAddress] = useState(null)
 
   // Check window object in DOM: has Phantom Wallet Ext. injected 
   // solana object?
@@ -22,6 +24,8 @@ const App = () => {
         // connect popup in case wallet is already connected
         const response = await solana.connect({ onlyIfTrusted: true })
         console.log('Connected with Public Key:', response.publicKey.toString())
+        // Set the user's public key in state
+        setWalletAddress(response.publicKey.toString())
       } else {
         alert('Solana object not found --> Get a Phantom Wallet!')
       }
@@ -57,7 +61,8 @@ const App = () => {
         <div className="header-container">
           <p className="header">🍭 Candy Drop</p>
           <p className="sub-text">NFT drop machine with fair mint</p>
-          {renderNotConnectedContainer()}
+          {/* call render method only is there is no user wallet stored in State */}
+          {!walletAddress && renderNotConnectedContainer()}
         </div>
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
