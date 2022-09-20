@@ -1,43 +1,27 @@
 {
-  "name": "candy-drop",
-  "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "@metaplex/js": "^4.7.0",
-    "@project-serum/anchor": "^0.18.2",
-    "@solana/wallet-adapter-base": "^0.9.1",
-    "@solana/web3.js": "^1.30.2",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1",
-    "react-dotenv": "^0.1.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "nextjsapp",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@project-serum/anchor": "^0.25.0",
+        "@solana/spl-token": "0.1.8",
+        "@solana/wallet-adapter-base": "^0.9.17",
+        "@solana/wallet-adapter-react": "^0.15.19",
+        "@solana/wallet-adapter-react-ui": "^0.9.17",
+        "@solana/wallet-adapter-wallets": "^0.18.10",
+        "@solana/web3.js": "^1.62.1",
+        "next": "12.3.1",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "devDependencies": {
+        "eslint": "8.23.1",
+        "eslint-config-next": "12.3.1"
+    }
 }
