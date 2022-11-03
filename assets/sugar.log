@@ -1,0 +1,2 @@
+{"v":0,"name":"sugar","msg":"Lend me some sugar, I am your neighbor.","level":30,"hostname":"fedora","pid":23360,"time":"2022-11-02T04:48:49.25504561Z","target":"sugar","line":116,"file":"src/main.rs"}
+{"v":0,"name":"sugar","msg":"MissingFileError(\"config.json\")","level":50,"hostname":"fedora","pid":23360,"time":"2022-11-02T04:48:49.255202813Z","target":"sugar_cli::config::parser","line":21,"file":"src/config/parser.rs"}

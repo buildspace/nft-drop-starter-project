@@ -1,0 +1,20 @@
+{
+  "name": "Shastra Wallpaper 1",
+  "symbol": "",
+  "description": "Collection of wallpapers of Shastra OS",
+  "image": "1.png",
+  "attributes": [
+    {
+      "trait_type": "Image",
+      "value": "0"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "0.png",
+        "type": "image/png"
+      }
+    ]
+  }
+}
