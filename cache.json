@@ -1,0 +1,33 @@
+{
+  "program": {
+    "candyMachine": "7EHk44FsCWYtRTj7AkRGSRnuQ4K8MGQ6PQarZunKjkoC",
+    "candyMachineCreator": "3zT2HVNnLNSN9CDdm4hBd5m1bA2KnJP3nA665GGFGQP4",
+    "collectionMint": ""
+  },
+  "items": {
+    "0": {
+      "name": "PANDA",
+      "image_hash": "9a65c9a54071c7379e251166da2650d9aaf1b8452ee4e3c603d286b12414914f",
+      "image_link": "https://nftstorage.link/ipfs/bafybeigf5aub5a6fftfe5qmheubrlnpem6x5wgjlpnedklqqnej2barhey/0.png",
+      "metadata_hash": "68814c7f9c1a8c4d4d284fd440a4bd1bd0aea571d8c5bfd1c07e9ee252f94c96",
+      "metadata_link": "https://nftstorage.link/ipfs/bafybeiequzqut5qnfn5q47vhqzeodi3pdltjbk2qmmmbnmsu4h6vxgz5o4/0.json",
+      "onChain": true
+    },
+    "1": {
+      "name": "PANDA",
+      "image_hash": "574586303bc50e71d8d10a6b75cf24eea8a7c0293c2f60061cdb3028a1822a71",
+      "image_link": "https://nftstorage.link/ipfs/bafybeigf5aub5a6fftfe5qmheubrlnpem6x5wgjlpnedklqqnej2barhey/1.png",
+      "metadata_hash": "66a4e4ca5d4e46eb583f61455cb65144cabb97cd5cea3aa24a2cf7188eb0e38b",
+      "metadata_link": "https://nftstorage.link/ipfs/bafybeiequzqut5qnfn5q47vhqzeodi3pdltjbk2qmmmbnmsu4h6vxgz5o4/1.json",
+      "onChain": true
+    },
+    "2": {
+      "name": "PANDA",
+      "image_hash": "a47319e6ab4d1dcfcd49a8f3c36a4c9faf3d1825f5b2a559aaa138310711676b",
+      "image_link": "https://nftstorage.link/ipfs/bafybeigf5aub5a6fftfe5qmheubrlnpem6x5wgjlpnedklqqnej2barhey/2.png",
+      "metadata_hash": "95daaf5471c00d0e92a4d4ff2223732ac61d54c2c3652f0b568b41e4a2dc0a44",
+      "metadata_link": "https://nftstorage.link/ipfs/bafybeiequzqut5qnfn5q47vhqzeodi3pdltjbk2qmmmbnmsu4h6vxgz5o4/2.json",
+      "onChain": true
+    }
+  }
+}
