@@ -1,0 +1,20 @@
+{
+    "name": "PANDA",
+    "symbol": "PANDA",
+    "description": "Collection of 3 numbers on the blockchain. This is the number 3/3.",
+    "image": "2.png",
+    "attributes": [
+      {
+        "trait_type": "Number",
+        "value": "0"
+      }
+    ],
+    "properties": {
+      "files": [
+        {
+          "uri": "2.png",
+          "type": "image/png"
+        }
+      ]
+    }
+  }
