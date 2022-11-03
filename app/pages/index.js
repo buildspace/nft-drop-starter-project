@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import CandyMachine from '../components/CandyMachine';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
@@ -22,10 +23,6 @@ const Home = () => {
         </div>
     );
 
-    useEffect(() => {
-        console.log('Public key', wallet.publicKey?.toString());
-    }, [wallet.publicKey]);
-
     return (
         <div className='App'>
             <div className='container'>
@@ -33,9 +30,12 @@ const Home = () => {
                     <p className='header'>🍭 Candy Drop</p>
                     <p className='sub-text'>NFT drop machine with fair mint</p>
                     {/* Render your connect to wallet button right here */}
-                    {wallet.publicKey ? 'Hello' : renderNotConnectedContainer()}
+                    {wallet.publicKey ? (
+                        <CandyMachine walletAddress={wallet} />
+                    ) : (
+                        renderNotConnectedContainer()
+                    )}
                 </div>
-
                 <div className='footer-container'>
                     <img
                         alt='Twitter Logo'
