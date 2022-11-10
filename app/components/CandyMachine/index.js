@@ -3,6 +3,7 @@ import { Connection, PublicKey } from "@solana/web3.js";
 import { useEffect, useState} from 'react';
 import { Program, AnchorProvider, web3 } from "@project-serum/anchor";
 import { MintLayout, TOKEN_PROGRAM_ID, Token } from "@solana/spl-token";
+// import CountdownTimer from '../CountdownTimer';
 // import styles from "../../styles/CandyMachine.css";
 import { sendTransactions } from "./connection";
 import {
