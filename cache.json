@@ -1,0 +1,25 @@
+{
+  "program": {
+    "candyMachine": "7ZSgivV2TBL1RbVWNf5rvh7H3ypB6gK2bsMEawRFcJwW",
+    "candyMachineCreator": "3BciiMeytL1Lsu34fudQjuG79VUDS8F4a7tzd7dC1PGc",
+    "collectionMint": ""
+  },
+  "items": {
+    "0": {
+      "name": "Shastra Wallpaper 1",
+      "image_hash": "6525c24b2e313c0c2387214c681328be71e359a365b6076c55672c7743d27dfd",
+      "image_link": "https://nftstorage.link/ipfs/bafybeidn5as4oplceinyux7v5unu6babsulbn2nv5tgraec5sivdw6s66m/0.png",
+      "metadata_hash": "182893974394621c5a23a890d792b1847ce6c1506c9f81acaeb3b493e5e67fa8",
+      "metadata_link": "https://nftstorage.link/ipfs/bafybeigscarmxz4hf6a33k2hgo42pijdwgevsypy44t6ig2g3rj4vs2454/0.json",
+      "onChain": true
+    },
+    "1": {
+      "name": "Shastra Wallpaper 1",
+      "image_hash": "c6034cd2d2b2680d7b2accf89ae2ddd1eb5399540e8ccba1d016b519026f22a0",
+      "image_link": "https://nftstorage.link/ipfs/bafybeidn5as4oplceinyux7v5unu6babsulbn2nv5tgraec5sivdw6s66m/1.png",
+      "metadata_hash": "ccec21bd00c30362828dae46eba0c2523115617c97d306fb60957dbdc6aac617",
+      "metadata_link": "https://nftstorage.link/ipfs/bafybeigscarmxz4hf6a33k2hgo42pijdwgevsypy44t6ig2g3rj4vs2454/1.json",
+      "onChain": true
+    }
+  }
+}
